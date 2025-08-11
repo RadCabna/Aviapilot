@@ -11,6 +11,7 @@ struct GameFrame: Equatable {
     var name: String = "emptyRectangle"
     var xPosition: CGFloat = 0
     var yPosition: CGFloat = 0
+    var color = 0
 }
 
 struct Pos {
@@ -18,7 +19,49 @@ struct Pos {
     var y: CGFloat
 }
 
-struct Figure {
+struct PlaneRoad: Equatable {
+    var row: Int
+    var col: Int
+}
+
+struct ShopItem: Equatable {
+    var image: String
+    var price: Int
+    var name: String
+}
+
+struct Trophy: Equatable {
+    var image: String
+    var headText: String
+    var text: String
+}
+
+struct QuestTarget: Equatable {
+    var headText: String
+    var text: String
+}
+
+struct Plane: Equatable {
+    var id = UUID()
+    var name: String
+    var color: Int
+    var xPosition: CGFloat = 0
+    var yPosition: CGFloat = -500
+    var rotation: CGFloat = 0
+    var xScale: CGFloat = 1
+    var yScale: CGFloat = 1
+    var opacity: CGFloat = 1
+    var inGame = true
+    var ride = false
+    var rideTimer: Timer? = nil
+    var planeRow = 0
+    var planeCol = 0
+    var road: [PlaneRoad] = []
+    var roadPositionIndex = 0
+    var finish = false
+}
+
+struct Figure: Equatable {
     var name: String
     var color: Int
     var type: Int
@@ -40,6 +83,129 @@ struct PresentedFigures {
 
 class Arrays {
     
+    
+    static var questArray = [
+        QuestTarget(headText: "First Flight", text: "Launch your first airplane"),
+        QuestTarget(headText: "Color Sync", text: "Match a plane with the route of the same color"),
+        QuestTarget(headText: "Double Launch", text: "Launch two planes in a row without mistakes"),
+        QuestTarget(headText: "Sky Stretch", text: "Build a route using 5 blocks"),
+        QuestTarget(headText: "Perfect Dispatcher", text: "Finish a level with no color mismatches")
+    ]
+    
+    static var trophyArray = [
+        Trophy(image: "trophy1", headText: "Sky Architect", text: "Build 50 air bridges."),
+        Trophy(image: "trophy2", headText: "First Flight", text: "Launch your first airplane"),
+        Trophy(image: "trophy3", headText: "Color Commander", text: "Match 30 planes with correctly colored routes"),
+        Trophy(image: "trophy4", headText: "Chain Genius", text: "Create a combo of 5+ connected blocks"),
+        Trophy(image: "trophy5", headText: "Speed Dispatcher", text: "Launch 10 planes in under 60 seconds"),
+    ]
+    
+    
+    static var shopItemsArray: [ShopItem] = [
+        ShopItem(image: "shopPlane1", price: 1, name: "Red \nComet"),
+        ShopItem(image: "shopPlane2", price: 1000, name: "Night \nFalcon"),
+        ShopItem(image: "shopPlane3", price: 1300, name: "Aero \nDjinn"),
+        ShopItem(image: "shopPlane4", price: 1800, name: "Pilot \nExpress"),
+        ShopItem(image: "shopPlane5", price: 3000, name: "Turbo \nSputnik"),
+        ]
+    
+    static var planesArray1 = [
+        Plane(name: "plane1_1", color: 1),
+        Plane(name: "plane1_1", color: 1),
+        Plane(name: "plane1_1", color: 1),
+        Plane(name: "plane1_1", color: 1),
+        Plane(name: "plane1_1", color: 1)
+    ]
+    
+    static var planesArray2 = [
+        Plane(name: "plane1_2", color: 2),
+        Plane(name: "plane1_2", color: 2),
+        Plane(name: "plane1_2", color: 2),
+        Plane(name: "plane1_2", color: 2),
+        Plane(name: "plane1_2", color: 2)
+    ]
+    
+    static var planesArray3 = [
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_3", color: 3)
+    ]
+    
+    static var planesArray4 = [
+        Plane(name: "plane1_4", color: 4),
+        Plane(name: "plane1_4", color: 4),
+        Plane(name: "plane1_4", color: 4),
+        Plane(name: "plane1_4", color: 4),
+        Plane(name: "plane1_4", color: 4)
+    ]
+    
+    static var planesArray5 = [
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_5", color: 5)
+    ]
+    
+    static var planesArray6 = [
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_3", color: 3)
+    ]
+    
+    static var planesArray7 = [
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_3", color: 3)
+    ]
+    
+    static var planesArray8 = [
+        Plane(name: "plane1_1", color: 1),
+        Plane(name: "plane1_1", color: 1),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_1", color: 1),
+        Plane(name: "plane1_1", color: 1)
+    ]
+    
+    static var planesArray9 = [
+        Plane(name: "plane1_2", color: 2),
+        Plane(name: "plane1_2", color: 2),
+        Plane(name: "plane1_2", color: 2),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_2", color: 2),
+        Plane(name: "plane1_2", color: 2)
+    ]
+    
+    static var planesArray10 = [
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_2", color: 2),
+        Plane(name: "plane1_2", color: 2),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_3", color: 3),
+        Plane(name: "plane1_5", color: 5),
+        Plane(name: "plane1_6", color: 6),
+        Plane(name: "plane1_6", color: 6),
+        Plane(name: "plane1_5", color: 5)
+    ]
+    
+    static var allPlanesArray = [planesArray1, planesArray2, planesArray3, planesArray4, planesArray5, planesArray6, planesArray7, planesArray8, planesArray9, planesArray10]
+    
     static var figuresCoordinates: [Pos] = [
         Pos(x: -100, y: 377),
         Pos(x: 0, y: 377),
@@ -47,12 +213,12 @@ class Arrays {
     ]
     
     static var figuresArray: [Figure] = [
-        Figure(name: "fig1_1", color: 1, type: 1),
-        Figure(name: "fig1_2", color: 2, type: 1),
-        Figure(name: "fig1_3", color: 3, type: 1),
-        Figure(name: "fig1_4", color: 4, type: 1),
-        Figure(name: "fig1_5", color: 5, type: 1),
-        Figure(name: "fig1_6", color: 6, type: 1),
+//        Figure(name: "fig1_1", color: 1, type: 1),
+//        Figure(name: "fig1_2", color: 2, type: 1),
+//        Figure(name: "fig1_3", color: 3, type: 1),
+//        Figure(name: "fig1_4", color: 4, type: 1),
+//        Figure(name: "fig1_5", color: 5, type: 1),
+//        Figure(name: "fig1_6", color: 6, type: 1),
         Figure(name: "fig2_1", color: 1, type: 2),
         Figure(name: "fig2_2", color: 2, type: 2),
         Figure(name: "fig2_3", color: 3, type: 2),
@@ -86,13 +252,13 @@ class Arrays {
     ]
     
     static var gameFrames = [
-       [ GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame()],
-       [ GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame()],
-       [ GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame()],
-       [ GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame()],
-       [ GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame()],
-       [ GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame()],
-       [ GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame()],
+        [ GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle"),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle")],
+        [ GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle"),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle")],
+        [ GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle"),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle")],
+        [ GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle"),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle")],
+        [ GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle"),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle")],
+        [ GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle"),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle")],
+        [ GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle"),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(),GameFrame(name: "lockRectangle"),GameFrame(name: "lockRectangle")],
     ]
     
     static var framePositions = [
@@ -105,3 +271,5 @@ class Arrays {
         [Pos(x: -158, y: 274), Pos(x: -123, y: 274), Pos(x: -88, y: 274), Pos(x: -53, y: 274), Pos(x: -18, y: 274),Pos(x: 18, y: 274), Pos(x: 53, y: 274),Pos(x: 88, y: 274),Pos(x: 123, y: 274),Pos(x: 158, y: 274)],
     ]
 }
+
+

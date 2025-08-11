@@ -6,14 +6,76 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DDB818C82E4A41F700A2570A /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DDB818C12E4A41F700A2570A /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DDB818D02E4A44F100A2570A /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = DDB818CF2E4A44F100A2570A /* OneSignalExtension */; };
+		DDB818D22E4A44F100A2570A /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = DDB818D12E4A44F100A2570A /* OneSignalFramework */; };
+		DDB818D42E4A44F100A2570A /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = DDB818D32E4A44F100A2570A /* OneSignalInAppMessages */; };
+		DDB818D62E4A45E900A2570A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DDB818D52E4A45E900A2570A /* PrivacyInfo.xcprivacy */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DDB818C62E4A41F700A2570A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD751DC92E3BDDF5004CA511 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDB818C02E4A41F700A2570A;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DDB818CD2E4A41F700A2570A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DDB818C82E4A41F700A2570A /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		DD751DD12E3BDDF5004CA511 /* Aviapilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviapilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDB818C12E4A41F700A2570A /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDB818D52E4A45E900A2570A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DDB817862E40F93E00A2570A /* Exceptions for "Aviapilot" folder in "Aviapilot" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DD751DD02E3BDDF5004CA511 /* Aviapilot */;
+		};
+		DDB818CC2E4A41F700A2570A /* Exceptions for "OneSignalNotificationServiceExtension" folder in "OneSignalNotificationServiceExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DDB818C02E4A41F700A2570A /* OneSignalNotificationServiceExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DD751DD32E3BDDF5004CA511 /* Aviapilot */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DDB817862E40F93E00A2570A /* Exceptions for "Aviapilot" folder in "Aviapilot" target */,
+			);
 			path = Aviapilot;
+			sourceTree = "<group>";
+		};
+		DDB818C22E4A41F700A2570A /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DDB818CC2E4A41F700A2570A /* Exceptions for "OneSignalNotificationServiceExtension" folder in "OneSignalNotificationServiceExtension" target */,
+			);
+			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +85,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB818D42E4A44F100A2570A /* OneSignalInAppMessages in Frameworks */,
+				DDB818D22E4A44F100A2570A /* OneSignalFramework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDB818BE2E4A41F700A2570A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB818D02E4A44F100A2570A /* OneSignalExtension in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,7 +104,9 @@
 		DD751DC82E3BDDF5004CA511 = {
 			isa = PBXGroup;
 			children = (
+				DDB818D52E4A45E900A2570A /* PrivacyInfo.xcprivacy */,
 				DD751DD32E3BDDF5004CA511 /* Aviapilot */,
+				DDB818C22E4A41F700A2570A /* OneSignalNotificationServiceExtension */,
 				DD751DD22E3BDDF5004CA511 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				DD751DD12E3BDDF5004CA511 /* Aviapilot.app */,
+				DDB818C12E4A41F700A2570A /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,20 +130,47 @@
 				DD751DCD2E3BDDF5004CA511 /* Sources */,
 				DD751DCE2E3BDDF5004CA511 /* Frameworks */,
 				DD751DCF2E3BDDF5004CA511 /* Resources */,
+				DDB818CD2E4A41F700A2570A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DDB818C72E4A41F700A2570A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				DD751DD32E3BDDF5004CA511 /* Aviapilot */,
 			);
 			name = Aviapilot;
 			packageProductDependencies = (
+				DDB818D12E4A44F100A2570A /* OneSignalFramework */,
+				DDB818D32E4A44F100A2570A /* OneSignalInAppMessages */,
 			);
 			productName = Aviapilot;
 			productReference = DD751DD12E3BDDF5004CA511 /* Aviapilot.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DDB818C02E4A41F700A2570A /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDB818C92E4A41F700A2570A /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				DDB818BD2E4A41F700A2570A /* Sources */,
+				DDB818BE2E4A41F700A2570A /* Frameworks */,
+				DDB818BF2E4A41F700A2570A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DDB818C22E4A41F700A2570A /* OneSignalNotificationServiceExtension */,
+			);
+			name = OneSignalNotificationServiceExtension;
+			packageProductDependencies = (
+				DDB818CF2E4A44F100A2570A /* OneSignalExtension */,
+			);
+			productName = OneSignalNotificationServiceExtension;
+			productReference = DDB818C12E4A41F700A2570A /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -83,6 +185,9 @@
 					DD751DD02E3BDDF5004CA511 = {
 						CreatedOnToolsVersion = 16.3;
 					};
+					DDB818C02E4A41F700A2570A = {
+						CreatedOnToolsVersion = 16.3;
+					};
 				};
 			};
 			buildConfigurationList = DD751DCC2E3BDDF5004CA511 /* Build configuration list for PBXProject "Aviapilot" */;
@@ -94,18 +199,30 @@
 			);
 			mainGroup = DD751DC82E3BDDF5004CA511;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DDB818CE2E4A44F100A2570A /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DD751DD22E3BDDF5004CA511 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DD751DD02E3BDDF5004CA511 /* Aviapilot */,
+				DDB818C02E4A41F700A2570A /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DD751DCF2E3BDDF5004CA511 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB818D62E4A45E900A2570A /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDB818BF2E4A41F700A2570A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +239,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DDB818BD2E4A41F700A2570A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DDB818C72E4A41F700A2570A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDB818C02E4A41F700A2570A /* OneSignalNotificationServiceExtension */;
+			targetProxy = DDB818C62E4A41F700A2570A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DD751DDB2E3BDDF8004CA511 /* Debug */ = {
@@ -249,12 +381,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Aviapilot/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
@@ -263,7 +397,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = f1.Aviapilot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamasrl.avipilot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -286,12 +420,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Aviapilot/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
@@ -300,7 +436,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = f1.Aviapilot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamasrl.avipilot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -310,6 +446,59 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.4;
+			};
+			name = Release;
+		};
+		DDB818CA2E4A41F700A2570A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamasrl.avipilot.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DDB818CB2E4A41F700A2570A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamasrl.avipilot.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -334,7 +523,45 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		DDB818C92E4A41F700A2570A /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDB818CA2E4A41F700A2570A /* Debug */,
+				DDB818CB2E4A41F700A2570A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DDB818CE2E4A44F100A2570A /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.14;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DDB818CF2E4A44F100A2570A /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB818CE2E4A44F100A2570A /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalExtension;
+		};
+		DDB818D12E4A44F100A2570A /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB818CE2E4A44F100A2570A /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalFramework;
+		};
+		DDB818D32E4A44F100A2570A /* OneSignalInAppMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB818CE2E4A44F100A2570A /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalInAppMessages;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DD751DC92E3BDDF5004CA511 /* Project object */;
 }
