@@ -39,7 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DD751DD12E3BDDF5004CA511 /* Aviapilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aviapilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD751DD12E3BDDF5004CA511 /* Aviapilot - Glucksspiel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aviapilot - Glucksspiel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB818C12E4A41F700A2570A /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB818D52E4A45E900A2570A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,7 +114,7 @@
 		DD751DD22E3BDDF5004CA511 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD751DD12E3BDDF5004CA511 /* Aviapilot.app */,
+				DD751DD12E3BDDF5004CA511 /* Aviapilot - Glucksspiel.app */,
 				DDB818C12E4A41F700A2570A /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
@@ -146,7 +146,7 @@
 				DDB818D32E4A44F100A2570A /* OneSignalInAppMessages */,
 			);
 			productName = Aviapilot;
-			productReference = DD751DD12E3BDDF5004CA511 /* Aviapilot.app */;
+			productReference = DD751DD12E3BDDF5004CA511 /* Aviapilot - Glucksspiel.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DDB818C02E4A41F700A2570A /* OneSignalNotificationServiceExtension */ = {
@@ -398,7 +398,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hamasrl.avipilot;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Aviapilot - Glucksspiel";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -437,7 +437,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hamasrl.avipilot;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Aviapilot - Glucksspiel";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

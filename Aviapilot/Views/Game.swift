@@ -282,7 +282,7 @@ struct Game: View {
         .onChange(of: planesArray) { _ in
             for i in 0..<planesArray.count {
                 checkPosibleRoad(index: i)
-                if planesArray[i].yPosition == 274*screenHeight/932 {
+                if planesArray[i].yPosition == 274 {
                         planesArray[i].rideTimer?.invalidate()
                     withAnimation(Animation.easeInOut(duration: 2)) {
                         planesArray[i].yPosition = 350*screenHeight/932
